@@ -1,6 +1,6 @@
 Flask==2.2.2
 werkzeug==2.2.3
-Flask-Cors==2.1.0
+flask_cors==3.1.1
 numpy==1.24.1
 Pillow==9.4.0
 moviepy==1.0.3
