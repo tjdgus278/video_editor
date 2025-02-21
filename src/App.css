@@ -1,5 +1,161 @@
 .App {
+  font-family: Arial, sans-serif;
   text-align: center;
+  padding: 20px;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropzone {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  margin: 20px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.images-preview {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 중앙 정렬 */
+}
+
+.image-row {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 내부 요소 정렬 */
+  gap: 10px;
+  width: fit-content; /* 내용물에 맞게 크기 조절 */
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc; /* 가시적으로 확인 */
+  background: #f9f9f9;
+}
+
+.image-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.settings-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 100px;
+}
+
+.settings-item label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.settings-item input[type="checkbox"] {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+}
+
+.settings-item input,
+.settings-item select,
+.settings-item textarea {
+  width: auto;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.settings-item textarea {
+  height: 40px;
+  resize: none;
+}
+
+.bgm-upload {
+  margin: 20px 0;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="number"] {
+  width: 80%;
+}
+
+input[type="text"], textarea {
+  width: 80%;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.font-setting {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px; /* 항목 간 간격 조정 */
+}
+
+.font-setting label {
+  margin-right: 10px; /* 레이블과 입력 사이 간격 */
+}
+
+.font-setting input, .font-setting select {
+  margin-left: 5px; /* 입력 요소와 레이블 간 간격 */
+}
+
+a {
+  display: block;
+  margin-top: 20px;
+  color: #61dafb;
 }
 
 .App-logo {
