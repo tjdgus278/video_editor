@@ -1,6 +1,6 @@
 [build]
-  command = "pip install -r requirements.txt"
-  publish = "."
-
+  command = "npm install && npm run build"
+  publish = "build"
+  
 [build.environment]
   PYTHON_VERSION = "3.10"
