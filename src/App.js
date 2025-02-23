@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import './App.css';
+import API_BASE_URL from "./config";
 
 const App = () => {
   const [images, setImages] = useState([]);
@@ -54,7 +55,7 @@ const App = () => {
     formData.append('selectedFont', selectedFont); // 예시로 폰트 경로 설정
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/generate-video', {
+      const response = await fetch(`${API_BASE_URL}/generate-video`, {
         method: 'POST',
         body: formData,
       });
