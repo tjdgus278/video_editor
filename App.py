@@ -186,7 +186,7 @@ def generate_video():
 
         # 최종 비디오 저장
         final_clip.write_videofile(output_path, codec="libx264", fps=24)
-        return jsonify({"video_url": f"http://localhost:5000/get-video?filename=output.mp4"}), 200
+        return jsonify({"video_url": f"http://10.88.29.104:5000/get-video?filename=output.mp4"}), 200
     except Exception as e:
         print(f"Error: {e}")
         return jsonify({"error": str(e)}), 500
